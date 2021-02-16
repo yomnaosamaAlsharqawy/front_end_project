@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!--css files-->
+    <link rel="stylesheet" href="css/moreinfo_episodes.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid mt-1">
+        <!--- Two Column Section -->
+        <div class="row justify-content-between">
+            <div class="col-lg-5 col-md-5 col-sm-5">
+                <span style="display: inline;" id="match">95% Match</span>
+                <span style="display: inline;">2013</span>
+                <a href="#bottom" class="btn btn-sm rounded border-light"
+                    style="display: inline; color: white;"><span>+18</span></a>
+                <span style="display: inline;">5 seasons</span>
+                <span style="display: inline;">AD)))</span>
+                <br> <br>
+
+                <h2>S5:E1 "Live Free Or Die"</h2>
+                <p>Walt goes to see his family, still under guard, while dealing with the aftermath of the explosion at
+                    Casa
+                    Tranquila.</p>
+
+            </div>
+            <div class="col-lg-3 col-sm-5 col-md-5 info">
+                <span>cast:</span>
+                <a href="#">Bryan Cranston,</a>
+                <a href="#">Aaron Paul,</a>
+                <a href="#">Anna Gunn,</a>
+                <a href="#">more</a><br>
+
+
+                <span>Genres:</span>
+                <a href="#">Crime TV Dramas,</a>
+                <a href="#">TV THrillers,</a>
+                <a href="#">TV Dramas</a><br>
+
+                <span>This Show is:</span>
+                <a href="#">Violent,</a>
+                <a href="#">Gritty,</a>
+                <a href="#">Suspensefl</a>
+            </div>
+        </div>
+
+
+        <!--Eposides And dropdown menue-->
+        <div class="d-flex w-100 justify-content-between">
+            <div class="">
+                <h2>Episodes</h2>
+            </div>
+            <button class="btn btn-dark btn-lg dropdown-toggle season_menue ml-auto" role="button" id="dropdownMenuLink"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Seasons
+            </button>
+            <div class="dropdown-menu season_menue1" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#"><span>Season 1</span> (7 Episodes)</a>
+                <a class="dropdown-item" href="#"><span>Season 2</span> (13 Episodes)</a>
+                <a class="dropdown-item" href="#"><span>Season 3</span> (13 Episodes)</a>
+                <a class="dropdown-item" href="#"><span>Season 4</span> (13 Episodes)</a>
+                <a class="dropdown-item" href="#"><span>Season 5</span> (16 Episodes)</a>
+
+            </div>
+        </div>
+        <br>
+
+        <!--**************************Eposide sections****************************************-->
+        <div class="list-group">
+
+            <a href="#"
+                class="d-flex align-items-center list-group-item list-group-item-action c-bg-dark justify-content-start">
+                <div class="h3 mr-4">1</div>
+                <div class="btn-img-wrapper w-25">
+                    <img src="img/image.jpeg" class="w-100">
+                    <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 30%"></div>
+                    </div>
+                    <i class="far fa-play-circle"></i>
+                </div>
+                <div class="w-100 ml-2">
+                    <div class="d-flex w-100 justify-content-between p-0">
+                        <h5 class="mb-1">Madrigal</h5>
+                        <small>47m</small>
+                    </div>
+                    <p class="mb-1">Walt and Jesse decide to look for a new partner to help them in their latest scheme.
+                        The DEA sifts through various leads, hoping to find something.</p>
+                </div>
+            </a>
+            <hr class="light w-100">
+
+            <a href="#"
+                class="d-flex align-items-center list-group-item list-group-item-action c-bg-dark justify-content-start">
+                <div class="h3 mr-4">2</div>
+                <div class="btn-img-wrapper w-25">
+                    <img src="img/image.jpeg" class="w-100">
+                    <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 70%"></div>
+                    </div>
+                    <i class="far fa-play-circle"></i>
+                </div>
+                <div class="w-100 ml-4">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Madrigal</h5>
+                        <small>47m</small>
+                    </div>
+                    <p class="mb-1">Walt and Jesse decide to look for a new partner to help them in their latest scheme.
+                        The DEA sifts through various leads, hoping to find something.</p>
+                </div>
+            </a>
+        </div>
+        <!--**********************collapse part & Buttons******************************-->
+        <div class="hr-btn-wrapper mb-4" id="showmore">
+            <hr class="special-hr">
+            <button class="load-more-btn" onclick="showepisodes()"><svg viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M5.689 7.924L4.387 9.442 12.038 16l7.651-6.558-1.302-1.518-6.349 5.442z"></path>
+                </svg></button>
+        </div>
+        <div style="display: none;" id="hidden_episodes">
+            <hr class="light w-100">
+            <a href="#"
+                class="d-flex align-items-center list-group-item list-group-item-action c-bg-dark justify-content-start">
+                <div class="h3 mr-4">3</div>
+                <div class="btn-img-wrapper w-25">
+                    <img src="img/image.jpeg" class="w-100">
+                    <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 30%"></div>
+                    </div>
+                    <i class="far fa-play-circle"></i>
+                </div>
+                <div class="w-100 ml-2">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Madrigal</h5>
+                        <small>47m</small>
+                    </div>
+                    <p class="mb-1">Walt and Jesse decide to look for a new partner to help them in their latest scheme.
+                        The DEA sifts through various leads, hoping to find something.</p>
+                </div>
+            </a>
+            <hr class="light w-100">
+            <a href="#"
+                class="d-flex align-items-center list-group-item list-group-item-action c-bg-dark justify-content-start">
+                <div class="h3 mr-4">4</div>
+                <div class="btn-img-wrapper w-25">
+                    <img src="img/image.jpeg" class="w-100">
+                    <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 30%"></div>
+                    </div>
+                    <i class="far fa-play-circle"></i>
+                </div>
+                <div class="w-100 ml-2">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Madrigal</h5>
+                        <small>47m</small>
+                    </div>
+                    <p class="mb-1">Walt and Jesse decide to look for a new partner to help them in their latest scheme.
+                        The DEA sifts through various leads, hoping to find something.</p>
+                </div>
+            </a>
+            <div class="hr-btn-wrapper">
+                <hr class="special-hr">
+                <button class="load-more-btn mb-4" onclick="showepisodes()"><svg viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M5.65 16.076l-1.3-1.518L12 8l7.65 6.558-1.3 1.518L12 10.634z">
+                        </path>
+                    </svg></button>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+
+    <!--************************javascript & jquery links**************************-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <script src="js/moreinfo_episodes.js"></script>
+
+</body>
+
+</html>
