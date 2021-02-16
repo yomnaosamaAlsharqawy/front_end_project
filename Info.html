@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Episodes&Info</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+       .grad{
+        mask-image: linear-gradient(to bottom, rgb(17, 17, 17) 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgb(17, 17, 17) 80%, transparent 100%);
+       
+      } 
+      .MoreLikeThis{
+        margin: 0;
+        width: 100%;
+        height: 200px;
+        padding-bottom: 10px;
+      }
+     
+      .btngrp{
+        margin-top: -13%;
+        margin-bottom: 70px;
+        width: 100%;
+        
+      }
+      .btn-circ{
+       
+        background-color: rgba(42,42,42,.6);
+        border-color: rgba(255,255,255,.5);
+        font-size: 22px;
+        width: 55px;
+        height: 55px;
+        border-radius:50%;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 8px;
+        padding-bottom: 10px;
+        color: white;
+        align-items: center;
+        position: relative;
+        border: rgb(224, 224, 224) solid 1px;
+        
+      }
+      .btn-big{
+        font-size: 17px;
+        background-color: white;
+        color: black;
+        height: 55px;
+        width: 220px;
+        -webkit-box-align: center;
+        cursor: pointer;  
+        opacity: 1;
+        padding: 0.8rem;
+        position: relative;
+        word-break: break-word;
+        white-space: nowrap;
+        margin-left: 30px;
+        border-radius: 5%;
+        
+      }
+      .logo{
+        
+        width: 400px;
+        height: 180px;
+        margin-top: -45%;
+        position: relative;
+        margin-left: 50px;
+      }
+      
+      .tooltip-inner {
+
+        background-color: white;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 20px;
+        color: black;
+        font-weight: bolder;
+        margin-top: -55px;
+        max-width: 300px;
+        height: 40px;
+        
+      }
+      .arrow {
+        position: relative;
+        display: block !important;
+        width: 20px;
+        border-color: white;
+        border: 50px !important;        color: white;
+        
+      }
+      .bs-tooltip-auto[x-placement^=top], .bs-tooltip-top {
+        padding: 0;
+        border-color: white;
+        border: 50px !important;      }
+
+      .bs-tooltip-top .arrow {
+        bottom: 8px;
+        border-color: white;
+        border: 50px !important;
+      } 
+
+
+
+      .my-flex-container {
+        
+        height: 100px;
+        margin-bottom: 20px;
+      }
+
+      .my-flex-container2 {
+        width: 350px;
+        height: 450px;
+        margin-bottom: 20px;
+        background-color: rgb(51, 51, 51);
+      }
+      .my-flex-container-column {
+        
+        height: 200px;
+        margin-bottom: 20px;
+      }
+      .my-flex-item {
+        
+        
+        height: 48px;
+      }
+      .my-flex-item-2 {
+        
+        
+        height: 96px;
+      }
+        
+    </style>
+  </head>
+
+  <body style="background-color: rgb(17, 17, 17);">
+
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+      });
+      </script>
+ 
+    
+    <div  class="container">
+
+        <img class="grad" style="width: 100%; max-height: 600px; " class= "center-block" src="https://www.etonline.com/sites/default/files/styles/video_1920x1080/public/images/2016-07/Vikings_072016_1280.jpg?itok=SkSVi5q9" alt="Vikings">  
+        
+          <div class="d-flex  flex-row btngrp">
+                  
+                  <div  class="p-1 my-flex-item">
+                    <a  href="#" class="btn-big btn btn-light" >
+                      <span style="font-weight:bolder;" class="fas fa-play"> &nbsp;&nbsp;&nbsp;</span> <b>Next Episode</b> 
+                    </a>
+                  </div>
+
+                  <div  class="p-1 my-flex-item">
+                    <a  href="#" class= "  btn btn-circ btn-outline-light font-weight-light" data-toggle="tooltip"  title="Add To My List">
+                      <span  class="fas fa-plus "></span> 
+                    </a>
+                  </div>
+
+                  <div  class="p-1 my-flex-item">
+                    <a  href="#" class=" btn btn-circ btn-outline-primary font-weight-light" data-toggle="tooltip"  title="I like this">
+                      <span style="font-weight: lighter;" class="fas fa-thumbs-up "></span> 
+                    </a>
+                  </div>
+
+                  <div  class="p-1 my-flex-item">
+                    <a  href="#" class="  btn btn-circ btn-outline-danger font-weight-light" data-toggle="tooltip"  title="Not for me">
+                      <span style="font-weight: lighter;" class="fas fa-thumbs-down "></span> 
+                    </a>
+                  </div>
+                  
+                  <div style="margin-right: 10px"  class="p-1 my-flex-item ml-auto ">
+                    <a  href="#" class="  btn-circ btn btn-outline-light font-weight-light" data-toggle="tooltip"  title="Mute">
+                      <span style="font-weight: light;" class="fas fa-volume-mute "></span> 
+                    </a>
+                  </div>
+                  
+                  
+              </div>
+            
+             
+              <div>
+                <img class="logo"  class= "center-block" src="https://occ-0-33-37.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABcRV6WGYvjP0pJ8T6zxV7F7iTUbJl7dQelRbjTTR99tFMKBV5aMPm4OEeofTAlM37C4Tikn8mBP8jnQNg4vLlNflCy3dZIlXW9P5.png?r=3e8" alt="Vikings">
+              </div>
+             
+              
+           
+            
+          
+          <br>
+          
+
+          <div style=" padding-left: 40px;"  class="row">
+            <div   class="col-md-8">
+                <h6 class="text-light"> <b> <span class="text-success" > 98% Match &nbsp; </span> 2019 &nbsp;  <a style=" padding-right: 5px; padding-left:  8px; border: gray solid 1px; text-decoration: solid; color: white;" href=""> 18+ </a> &nbsp;  6 Seasons &nbsp; &nbsp;  6 AD </b> </h6>
+                <br>
+                <br>
+
+                <h4 style="color: white;"> <b>S3:E1"Mercenary"</b>  </h4>
+                <br>
+
+                <h4 class="text-light"> Ragnar and Lagertha's fleets sail with a group intending to colonize Wessex. King Ecbert offers a deal. Ragnar forms a surprising alliance.</h4>
+            </div>
+                
+          
+            <div style=" padding-right: 60px; " class="col-md-4">
+              <p class= "text-muted"> Cast:  <a style= "color: white; " href=""> Travis Fimmel,  </a> <a style= "color: white; " href=""> Katheryn Winnick,  </a>  <a style= "color: white; " href=""> Clive Standen,  </a> <i> <a style= "color: white; " href=""> More...  </a> </i> </p>
+              <p class= "text-muted"> Genres:   <a style= "color: white; " href=""> Political TV Shows,  </a>  <a style= "color: white; " href=""> Period Pieces,  </a>  <a style= "color: white; " href=""> TV Dramas,  </a>  <a style= "color: white; " href=""> TV Action & Adventure,  </a>  <a style= "color: white; " href=""> US TV Shows  </a> </p>
+              <p class= "text-muted"> This Show Is:  <a style= "color: white; " href=""> Violent,  </a> <a style= "color: white; " href=""> Exciting.  </a> 
+            </div>
+          </div>
+
+
+
+          <!-- //////////////////////////////////////////////////////////////////////////////////////////// -->
+          
+          
+            <br>
+            <br>
+            <br>
+            
+            
+            <div class="row">
+                <div class="col-md-10">
+                    <h3 style="color: white;"> <b>Episodes:</b>  </h3>
+                </div>
+                <div class="col-md-2">
+                    <div class="btn-group " >
+                        <button type="button" class="btn btn-dark btn-lg">Episodes</button>
+                        <button type="button" class="btn btn-dark dropdown-toggle btn-lg" data-toggle="dropdown">
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#"> <b>Season 1</b>  (9 Episodes)</a></li>
+                            <li><a href="#"> <b>Season 2</b>  (10 Episodes)</a></li>
+                            <li><a href="#"> <b>Season 3</b>  (10 Episodes)</a></li>
+                            <li><a href="#"> <b>Season 4</b>  (20 Episodes)</a></li>
+                            <li><a href="#"> <b>Season 5</b>  (20 Episodes)</a></li>
+                            <li><a href="#"> <b>Season 6</b>  (10 Episodes)</a></li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
+
+              <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+
+              <div class="d-flex flex-row my-flex-container">
+
+                <div class="p-2 my-flex-item align-self-center "> <h4 style="color: white;"> 1</h4> </div>
+                <div class="p-2 my-flex-item"> <img style="width: 150px; height: 80px;" src="https://financerewind.com/wp-content/uploads/2020/07/Vikings-season-7-How-will-the-story-continue-Everything-you.png" alt=""> </div>
+                
+                <div class="p-2 my-flex-item"> <p class="txt-light" style="color: white;" > <b> Mercenary:  </b> <br>
+                  Ragnar and Lagertha's fleets sail with a group intending to colonize Wessex. King Ecbert offers a deal. Ragnar forms a surprising alliance. </div>
+                </p> 
+                <div class="p-2 my-flex-item"> <b class="txt-light" style="color: white;"> 49m </b>  </div> 
+              </div>
+
+              <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+              <div class="d-flex flex-row my-flex-container">
+                <div class="p-2 my-flex-item align-self-center "> <h4 style="color: white;"> 2</h4> </div>
+                <div class="p-2 my-flex-item"> <img style="width: 150px; height: 80px;" src="https://financerewind.com/wp-content/uploads/2020/07/Vikings-season-7-How-will-the-story-continue-Everything-you.png" alt=""> </div>
+                
+                <div class="p-2 my-flex-item"> <p class="txt-light" style="color: white;" > <b> The Wanderer:  </b> <br>
+                  Ragnar and Lagertha's fleets sail with a group intending to colonize Wessex. King Ecbert offers a deal. Ragnar forms a surprising alliance. </div>
+                </p> 
+                <div class="p-2 my-flex-item"> <b class="txt-light" style="color: white;"> 44m </b>  </div>  
+              </div>
+
+              <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+              <div class="d-flex flex-row my-flex-container">
+                <div class="p-2 my-flex-item align-self-center "> <h4 style="color: white;"> 3</h4> </div>
+                <div class="p-2 my-flex-item"> <img style="width: 150px; height: 80px;" src="https://financerewind.com/wp-content/uploads/2020/07/Vikings-season-7-How-will-the-story-continue-Everything-you.png" alt=""> </div>
+                
+                <div class="p-2 my-flex-item"> <p class="txt-light" style="color: white;" > <b> Warrior's Fate:  </b> <br>
+                  Ragnar and Lagertha's fleets sail with a group intending to colonize Wessex. King Ecbert offers a deal. Ragnar forms a surprising alliance. </div>
+                </p> 
+                <div class="p-2 my-flex-item"> <b class="txt-light" style="color: white;"> 45m </b>  </div>  
+              </div>
+
+              <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+              <div class="d-flex flex-row my-flex-container">
+                <div class="p-2 my-flex-item align-self-center "> <h4 style="color: white;"> 4</h4> </div>
+                <div class="p-2 my-flex-item"> <img style="width: 150px; height: 80px;" src="https://financerewind.com/wp-content/uploads/2020/07/Vikings-season-7-How-will-the-story-continue-Everything-you.png" alt=""> </div>
+                
+                <div class="p-2 my-flex-item"> <p class="txt-light" style="color: white;" > <b> Scarred:  </b> <br>
+                  Ragnar and Lagertha's fleets sail with a group intending to colonize Wessex. King Ecbert offers a deal. Ragnar forms a surprising alliance. </div>
+                </p> 
+                <div class="p-2 my-flex-item"> <b class="txt-light" style="color: white;"> 46m </b>  </div>  
+              </div>
+
+              <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+              <div class="d-flex flex-row my-flex-container">
+                <div class="p-2 my-flex-item align-self-center "> <h4 style="color: white;"> 5</h4> </div>
+                <div class="p-2 my-flex-item"> <img style="width: 150px; height: 80px;" src="https://financerewind.com/wp-content/uploads/2020/07/Vikings-season-7-How-will-the-story-continue-Everything-you.png" alt=""> </div>
+                
+                <div class="p-2 my-flex-item"> <p class="txt-light" style="color: white;" > <b> The Usurper:  </b> <br>
+                  Ragnar and Lagertha's fleets sail with a group intending to colonize Wessex. King Ecbert offers a deal. Ragnar forms a surprising alliance. </div>
+                </p> 
+                <div class="p-2 my-flex-item"> <b class="txt-light" style="color: white;"> 42m </b>  </div>  
+              </div>
+
+              <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+              <div class="d-flex flex-row my-flex-container">
+                <div class="p-2 my-flex-item align-self-center "> <h4 style="color: white;"> 6</h4> </div>
+                <div class="p-2 my-flex-item"> <img style="width: 150px; height: 80px;" src="https://financerewind.com/wp-content/uploads/2020/07/Vikings-season-7-How-will-the-story-continue-Everything-you.png" alt=""> </div>
+                
+                <div class="p-2 my-flex-item"> <p class="txt-light" style="color: white;" > <b> Born Again:  </b> <br>
+                  Ragnar and Lagertha's fleets sail with a group intending to colonize Wessex. King Ecbert offers a deal. Ragnar forms a surprising alliance. </div>
+                </p> 
+                <div class="p-2 my-flex-item"> <b class="txt-light" style="color: white;"> 47m </b>  </div>  
+              </div>
+
+              <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+              <div class="d-flex flex-row my-flex-container">
+                <div class="p-2 my-flex-item align-self-center "> <h4 style="color: white;"> 7</h4> </div>
+                <div class="p-2 my-flex-item"> <img style="width: 150px; height: 80px;" src="https://financerewind.com/wp-content/uploads/2020/07/Vikings-season-7-How-will-the-story-continue-Everything-you.png" alt=""> </div>
+                
+                <div class="p-2 my-flex-item"> <p class="txt-light" style="color: white;" > <b> Paris:  </b> <br>
+                  Ragnar and Lagertha's fleets sail with a group intending to colonize Wessex. King Ecbert offers a deal. Ragnar forms a surprising alliance. </div>
+                </p> 
+                <div class="p-2 my-flex-item"> <b class="txt-light" style="color: white;"> 43m </b>  </div>  
+              </div>
+
+              <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+              
+              <div class="d-flex flex-row my-flex-container">
+                <div class="p-2 my-flex-item align-self-center "> <h4 style="color: white;"> 8</h4> </div>
+                <div class="p-2 my-flex-item"> <img style="width: 150px; height: 80px;" src="https://financerewind.com/wp-content/uploads/2020/07/Vikings-season-7-How-will-the-story-continue-Everything-you.png" alt=""> </div>
+                
+                <div class="p-2 my-flex-item"> <p class="txt-light" style="color: white;" > <b> To The Gates:  </b> <br>
+                  Ragnar and Lagertha's fleets sail with a group intending to colonize Wessex. King Ecbert offers a deal. Ragnar forms a surprising alliance. </div>
+                </p> 
+                <div class="p-2 my-flex-item"> <b class="txt-light" style="color: white;"> 55m </b>  </div>  
+              </div>
+
+              <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+
+              <div class="d-flex flex-row my-flex-container">
+                <div class="p-2 my-flex-item align-self-center "> <h4 style="color: white;"> 9</h4> </div>
+                <div class="p-2 my-flex-item"> <img style="width: 150px; height: 80px;" src="https://financerewind.com/wp-content/uploads/2020/07/Vikings-season-7-How-will-the-story-continue-Everything-you.png" alt=""> </div>
+                
+                <div class="p-2 my-flex-item"> <p class="txt-light" style="color: white;" > <b> Breaking Point:  </b> <br>
+                  Ragnar and Lagertha's fleets sail with a group intending to colonize Wessex. King Ecbert offers a deal. Ragnar forms a surprising alliance. </div>
+                </p> 
+                <div class="p-2 my-flex-item"> <b class="txt-light" style="color: white;"> 48m </b>  </div>  
+              </div>
+
+              <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+
+              <div class="d-flex flex-row my-flex-container">
+                <div class="p-2 my-flex-item align-self-center "> <h4 style="color: white;"> 10 </h4> </div>
+                <div class="p-2 my-flex-item"> <img style="width: 150px; height: 80px;" src="https://financerewind.com/wp-content/uploads/2020/07/Vikings-season-7-How-will-the-story-continue-Everything-you.png" alt=""> </div>
+                
+                <div class="p-2 my-flex-item"> <p class="txt-light" style="color: white;" > <b> The Dead:  </b> <br>
+                  Ragnar and Lagertha's fleets sail with a group intending to colonize Wessex. King Ecbert offers a deal. Ragnar forms a surprising alliance. </div>
+                </p> 
+                <div class="p-2 my-flex-item"> <b class="txt-light" style="color: white;"> 49m </b>  </div>  
+              </div>
+
+              <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+              <br>
+
+              <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+              <h3 style="color: white;"> <b>More Like This</b>  </h3>
+
+              <br>
+
+
+              <div class="row">
+
+                <div class="col-md-4">
+                  <div class="d-inline-flex flex-column   my-flex-container2">
+                    
+                    <div st class=""> <img class="MoreLikeThis"  src="https://thecomeback.com/wp-content/uploads/2016/09/b28117ea-41bc-47fe-93ef-f82a1f31717b.jpg" alt=""> </div>
+                    <div><h4 class="text-success" style="margin-left: 10px;" > <b> 91% Match </b></h4></div>
+                    <div><h5  style=" margin-left: 10px; color: white;">  +18 &nbsp;  2006 </h5>
+                      <h6 class="text-light" style="margin-left: 10px;" > <b></b></h6>
+                    </div>
+                    <div class="p-2"> <p class="txt-light" style="color: white;" > 
+                      By day, mild-mannered Dexter is a blood-spatter analyst for the Miami police. But at night, he is a serial killer who only targets other murderers. </div>
+                    </p> 
+                    
+                  </div>
+                </div>
+
+                
+                <div class="col-md-4">
+                  <div class="d-inline-flex flex-column   my-flex-container2">
+                    
+                    <div st class=""> <img class="MoreLikeThis"  src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202001/Breaking_Bad.jpeg?Ifrqi.v01Y0KfAlAyY172HCu8HZTJJvy&size=770:433" alt=""> </div>
+                    <div><h4 class="text-success" style="margin-left: 10px;" > <b> 93% Match </b></h4></div>
+                    <div><h5  style=" margin-left: 10px; color: white;">  +18 &nbsp;  2008 </h5>
+                      <h6 class="text-light" style="margin-left: 10px;" > <b></b></h6>
+                    </div>
+                    <div class="p-2"> <p class="txt-light" style="color: white;" > 
+                      A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future. </div>
+                    </p> 
+                    
+                  </div>
+                </div>
+                  
+                <div class="col-md-4">
+                  <div class="d-inline-flex flex-column   my-flex-container2">
+                    
+                    <div st class=""> <img class="MoreLikeThis"  src="https://q8hashtagat.com/wp-content/uploads/2020/02/better-call-saul-696x392-1.jpg" alt=""> </div>
+                    <div><h4 class="text-success" style="margin-left: 10px;" > <b> 91% Match </b></h4></div>
+                    <div><h5  style=" margin-left: 10px; color: white;">  +18 &nbsp;  2015 </h5>
+                      <h6 class="text-light" style="margin-left: 10px;" > <b></b></h6>
+                    </div>
+                    <div class="p-2"> <p class="txt-light" style="color: white;" > 
+                      The trials and tribulations of criminal lawyer Jimmy McGill in the time before he established his strip-mall law office in Albuquerque, New Mexico. </div>
+                    </p> 
+                    
+                  </div>
+                </div>
+
+                
+                 
+              </div>
+
+              <div class="row">
+
+                <div class="col-md-4">
+                  <div class="d-inline-flex flex-column   my-flex-container2">
+                    
+                    <div st class=""> <img class="MoreLikeThis"  src="https://commonslibrary.org/wp-content/uploads/brooklyn99-s6-lrg.jpg" alt=""> </div>
+                    <div><h4 class="text-success" style="margin-left: 10px;" > <b> 99% Match </b></h4></div>
+                    <div><h5  style=" margin-left: 10px; color: white;">  +18 &nbsp;  2013 </h5>
+                      <h6 class="text-light" style="margin-left: 10px;" > <b></b></h6>
+                    </div>
+                    <div class="p-2"> <p class="txt-light" style="color: white;" > 
+                      Comedy series following the exploits of Det. Jake Peralta and his diverse, lovable colleagues as they police the NYPD's 99th Precinct. </div>
+                    </p> 
+                    
+                  </div>
+                </div>
+
+                
+                <div class="col-md-4">
+                  <div class="d-inline-flex flex-column   my-flex-container2">
+                    
+                    <div st class=""> <img class="MoreLikeThis"  src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/66fe4c393d24983d361e40b5498f16c142d21500ef9cc979080ee968b51c8dc7._UY500_UX667_RI_V_TTW_.jpg" alt=""> </div>
+                    <div><h4 class="text-success" style="margin-left: 10px;" > <b> 96% Match </b></h4></div>
+                    <div><h5  style=" margin-left: 10px; color: white;">  +18 &nbsp;  2005 </h5>
+                      <h6 class="text-light" style="margin-left: 10px;" > <b></b></h6>
+                    </div>
+                    <div class="p-2"> <p class="txt-light" style="color: white;" > 
+                      Due to a political conspiracy, an innocent man is sent to death row and his only hope is his brother, who makes it his mission to deliberately get himself sent to the same prison in order to break the both of them out, from the inside. </div>
+                    </p> 
+                    
+                  </div>
+                </div>
+                  
+                <div class="col-md-4">
+                  <div class="d-inline-flex flex-column   my-flex-container2">
+                    
+                    <div st class=""> <img class="MoreLikeThis"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_YiLBTkjW7aLwXqIaE1phulwPQBfgWIV56w&usqp=CAU" alt=""> </div>
+                    <div><h4 class="text-success" style="margin-left: 10px;" > <b> 74% Match </b></h4></div>
+                    <div><h5  style=" margin-left: 10px; color: white;">  +18 &nbsp;  2014 </h5>
+                      <h6 class="text-light" style="margin-left: 10px;" > <b></b></h6>
+                    </div>
+                    <div class="p-2"> <p class="txt-light" style="color: white;" > 
+                      An English combat nurse from 1945 is mysteriously swept back in time to 1743. </div>
+                    </p> 
+                    
+                  </div>
+                </div>
+
+                
+                 
+              </div>
+
+              <div class="row">
+
+                <div class="col-md-4">
+                  <div class="d-inline-flex flex-column   my-flex-container2">
+                    
+                    <div st class=""> <img class="MoreLikeThis"  src="https://images.indianexpress.com/2014/10/bradpitt-fury.jpg" alt=""> </div>
+                    <div><h4 class="text-success" style="margin-left: 10px;" > <b> 87% Match </b></h4></div>
+                    <div><h5  style=" margin-left: 10px; color: white;">  +18 &nbsp;  2014 </h5>
+                      <h6 class="text-light" style="margin-left: 10px;" > <b></b></h6>
+                    </div>
+                    <div class="p-2"> <p class="txt-light" style="color: white;" > 
+                      A grizzled tank commander makes tough decisions as he and his crew fight their way across Germany in April, 1945. </div>
+                    </p> 
+                    
+                  </div>
+                </div>
+
+                
+                <div class="col-md-4">
+                  <div class="d-inline-flex flex-column   my-flex-container2">
+                    
+                    <div st class=""> <img class="MoreLikeThis"  src="https://occ-0-33-37.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABe1BG2UPFboUCtdFm1bZkdN1k8eyAeEK5tVKLXXSSBeLLlUFiWWTUUZGxXHZZjaB6hs9xZU18mq7JNOr0cGao5oqKhARxA0sGdR07xQxgyItY4JFWB7ryw7DsqhDZQ.jpg?r=c25" alt=""> </div>
+                    <div><h4 class="text-success" style="margin-left: 10px;" > <b> 92% Match </b></h4></div>
+                    <div><h5  style=" margin-left: 10px; color: white;">  +18 &nbsp;  2013 </h5>
+                      <h6 class="text-light" style="margin-left: 10px;" > <b></b></h6>
+                    </div>
+                    <div class="p-2"> <p class="txt-light" style="color: white;" > 
+                      A gangster family epic set in 1900s England, centering on a gang who sew razor blades in the peaks of their caps, and their fierce boss Tommy Shelby. </div>
+                    </p> 
+                    
+                  </div>
+                </div>
+                  
+                <div class="col-md-4">
+                  <div class="d-inline-flex flex-column   my-flex-container2">
+                    
+                    <div st class=""> <img class="MoreLikeThis"  src="https://i.ytimg.com/vi/i1eJMig5Ik4/maxresdefault.jpg" alt=""> </div>
+                    <div><h4 class="text-success" style="margin-left: 10px;" > <b> 94% Match </b></h4></div>
+                    <div><h5  style=" margin-left: 10px; color: white;">  +18 &nbsp;  2014 </h5>
+                      <h6 class="text-light" style="margin-left: 10px;" > <b></b></h6>
+                    </div>
+                    <div class="p-2"> <p class="txt-light" style="color: white;" > 
+                      BoJack Horseman was the star of the hit television show "Horsin' Around" in the '80s and '90s, now he's washed up, living in Hollywood, complaining about everything, and wearing colorful sweaters. </div>
+                    </p> 
+                    
+                  </div>
+                </div>
+
+                
+                 
+              </div>
+
+              <div class="row">
+
+                <div class="col-md-4">
+                  <div class="d-inline-flex flex-column   my-flex-container2">
+                    
+                    <div st class=""> <img class="MoreLikeThis"  src="https://cdn11.bigcommerce.com/s-b72t4x/images/stencil/1280x1280/products/74418/81221/Rick_and_Morty_Poster__27566.1488842373.jpg?c=2" alt=""> </div>
+                    <div><h4 class="text-success" style="margin-left: 10px;" > <b> 99% Match </b></h4></div>
+                    <div><h5  style=" margin-left: 10px; color: white;">  +18 &nbsp;  2013 </h5>
+                      <h6 class="text-light" style="margin-left: 10px;" > <b></b></h6>
+                    </div>
+                    <div class="p-2"> <p class="txt-light" style="color: white;" > 
+                      An animated series that follows the exploits of a super scientist and his not-so-bright grandson. </div>
+                    </p> 
+                    
+                  </div>
+                </div>
+
+                
+                <div class="col-md-4">
+                  <div class="d-inline-flex flex-column   my-flex-container2">
+                    
+                    <div st class=""> <img class="MoreLikeThis"  src="https://charlie-gray.com/wp-content/uploads/2020/11/QUEENS-GAMBIT-POSTER-3-300x169.jpg" alt=""> </div>
+                    <div><h4 class="text-success" style="margin-left: 10px;" > <b> 90% Match </b></h4></div>
+                    <div><h5  style=" margin-left: 10px; color: white;">  +18 &nbsp;  2020 </h5>
+                      <h6 class="text-light" style="margin-left: 10px;" > <b></b></h6>
+                    </div>
+                    <div class="p-2"> <p class="txt-light" style="color: white;" > 
+                      Orphaned at the tender age of nine, prodigious introvert Beth Harmon discovers and masters the game of chess in 1960s USA. But child stardom comes at a price.. </div>
+                    </p> 
+                    
+                  </div>
+                </div>
+                  
+                <div class="col-md-4">
+                  <div class="d-inline-flex flex-column   my-flex-container2">
+                    
+                    <div st class=""> <img class="MoreLikeThis"  src="https://play-images-prod-cms.tech.tvnz.co.nz/api/v1/web/image/content/dam/images/entertainment/shows/s/sherlock/Sherlock_v2_showtile.png.2020-06-29T15:28:28+12:00.jpg" alt=""> </div>
+                    <div><h4 class="text-success" style="margin-left: 10px;" > <b> 84% Match </b></45></div>
+                    <div><h5  style=" margin-left: 10px; color: white;">  +18 &nbsp;  2010 </h5>
+                      <h6 class="text-light" style="margin-left: 10px;" > <b></b></h6>
+                    </div>
+                    <div class="p-2"> <p class="txt-light" style="color: white;" > 
+                      A modern update finds the famous sleuth and his doctor partner solving crime in 21st century London. </div>
+                    </p> 
+                    
+                  </div>
+                </div>
+
+                
+                 
+              </div>
+
+              <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+              <br>
+              <br>
+
+              <!-- //////////////////////////////////////////////////////////////////////////////////////////////////// -->
+              
+
+
+              <h3 class="text-light" ><b> About Vikings</b></h3>
+
+             
+              <br>
+
+              <p class= "text-muted"> Creators:   <a style= "color: white; " href=""> Michael Hirst </a> </p>
+
+              <p class= "text-muted"> Cast:  <a style= "color: white; " href=""> Michael Hirst,  </a> <a style= "color: white; " href=""> Michael Hirst,  </a> <a style= "color: white; " href=""> Michael Hirst,  </a> <a style= "color: white; " href=""> Michael Hirst,  </a> <a style= "color: white; " href=""> Michael Hirst,  </a> <a style= "color: white; " href=""> Michael Hirst,  </a> <a style= "color: white; " href=""> Michael Hirst,  </a> <a style= "color: white; " href=""> Michael Hirst,  </a> <a style= "color: white; " href=""> Michael Hirst,  </a> <a style= "color: white; " href=""> Michael Hirst,  </a> <a style= "color: white; " href=""> Michael Hirst,  </a><a style= "color: white; " href=""> Michael Hirst,  </a> <a style= "color: white; " href=""> Michael Hirst.  </a>  </p>
+
+              <p class= "text-muted"> Genres:   <a style= "color: white; " href=""> Political TV Shows,  </a>  <a style= "color: white; " href=""> Period Pieces,  </a>  <a style= "color: white; " href=""> TV Dramas,  </a>  <a style= "color: white; " href=""> TV Action & Adventure,  </a>  <a style= "color: white; " href=""> US TV Shows  </a> </p> 
+                 
+              <p class= "text-muted"> This show is:   <a style= "color: white; " href=""> Violent, </a> <a style= "color: white; " href=""> Exciting. </a> </p>
+
+              <p class= "text-muted"> Maturity rating:   <a style= "color: white; " href=""> Violence, </a> <a style= "color: white; " href=""> Violence, </a> <a style= "color: white; " href=""> Sex, </a><a style= "color: white; " href=""> Nudity, </a> <a style= "color: white; " href=""> Language, </a> <a style= "color: white; " href=""> Substances, </a> <a style= "color: white; " href=""> Sexual Violenece, </a> <a style= "color: white; " href=""> Recommended for ages 18 and up. </a> </p>  
+
+
+                
+            
+    </div>
+    
+    
+  </body>
+</html>
