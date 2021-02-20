@@ -49,10 +49,11 @@ function get(){
       arr = result
       console.log(arr)
       for (i=0 ;i<result.length;i++){
-        if(result[i].type == "movie"){
-        $('.m-top').append(generate_card(result[i].url.image,result[i].title))
-      }
-      }
+        if(result[i].type == "serial"){
+          $('.m-top').append(generate_card(result[i].url.image,result[i].title))
+        console.log(result[i].type)    
+        }
+        }   
     $('.card').click(player);
     if(localStorage.getItem('username') != 'admin'){
         $(".delete").css({
