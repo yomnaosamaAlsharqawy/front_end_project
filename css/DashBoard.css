@@ -1,0 +1,85 @@
+@font-face{
+    src: url(https://assets.nflxext.com/ffe/siteui/fonts/nf-icon-v1-93.woff);
+    font-family: netflix;
+}
+@font-face{
+    src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff2);
+    font-family: netflix2;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #141414;
+}
+.navbar{
+    background: #181818;
+    
+}
+.nav-link{
+    margin-right: 1rem;
+}
+.navbar-brand{
+    margin-right: 3rem;
+}
+.jumbotron{
+    border-radius: 0;
+    background-image : url(https://occ-0-4609-784.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABQeswFYSQhT_EKhWh1GiRCmRMNpDeJ0YZScEG1ADRZFxht1kMwkCc_rmyYjhHgH_MqlPO44lB9Tcf-nm86Aj1IBoFvDm.webp?r=2fc) ;
+    background-repeat: no-repeat;
+    background-size: cover ;
+background-position:center;
+    height: 100vh;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card{
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    height: 15rem;
+    padding:0;
+    border: 0;
+    border-radius: .3rem;
+    background-color: #181818;
+    z-index: 1;
+    align-items: center;
+}
+
+.card:hover{
+    transform: scale(1.4);
+    z-index: 5;
+    transition: all .1s linear;
+    transition-delay: .4s;
+    cursor: pointer;
+}
+
+.m-top{
+    margin-top: 4rem;
+    justify-content: center;
+}
+.card-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.card-text{
+    font-family: ne tflix;
+    font-size: 1.5rem;
+}
+footer{
+    background-color: #181818;
+    text-align: center;
+    font-size: 1.5rem;
+ 
+}
+i{
+    margin-right: 1rem;
+}
+.admin{
+    display: none;
+}
+.delete{
+    width: 50%;
+
+}

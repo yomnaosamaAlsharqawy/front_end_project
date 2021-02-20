@@ -1,0 +1,153 @@
+
+// document.addEventListener('DOMContentLoaded', (event) => {
+//   get()
+// });
+get()
+window.onscroll = function(){
+
+   if(window.scrollY  < 250)
+    $('.navbar').css({'background' :'transparent'})
+    else
+    $('.navbar').css({'background' :'#181818'})  
+}
+let i =0
+
+let auto_slider_img = 
+[
+    'https://occ-0-4609-784.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABQeswFYSQhT_EKhWh1GiRCmRMNpDeJ0YZScEG1ADRZFxht1kMwkCc_rmyYjhHgH_MqlPO44lB9Tcf-nm86Aj1IBoFvDm.webp?r=2fc',
+    'https://occ-0-4609-784.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABeBagQdScNrqUO9WDR3E8g1R8mNbxVSnUCme_pbwjG5VNIDOWGmZ74wzxOmwWtxdc5lK6QddwqqzqL0dA6I0QBUI0UX1.webp?r=5d1',
+    'https://occ-0-4609-784.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABYxf9wPTvH85qUFyru9EmKs4MCgfnt4nSUwwoWs4zL6Ke9s7gThZXdSCZXWoFlMebqgA7ENvYxWsmRG_7Qfml0kDP-Jd.webp?r=017',
+    'https://occ-0-4609-784.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABT57LyOsjWOnVvK_tEcoQGBv43xLpZ3u1YX7rpAeuTGKKqmQPCM9NQqU6-zAfjl3kfMPeCKeeYyJrTaq_0jDz613JFbu.webp?r=33d',
+    'https://occ-0-4609-784.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABRkumeuYeu67Yjb_fL92Wmpqf8aHj59q-rwJCj5kd-LEfBcPc32FGi-DhushJJH4G1SvPsZlqKdoxmyqk4HuyS4kVKC6.webp?r=567',
+    'https://occ-0-4609-784.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABUYLolq_XZqb03iMpNaeYmPp5pErmI5bigSQlt7Yr7Kvfw6jT1AZYLpVGoHTUk6DuD38CMEOpjGhSqqeaE11t-4-EvSa.webp?r=359'
+]
+setInterval(change_image,3000)
+function change_image(){
+    if(i < auto_slider_img.length){
+        $('.jumbotron').css('background-image', 'url(' + auto_slider_img[i] + ')');
+        i++;
+    }else{
+        i =0 ;
+    }
+}
+
+
+ var img =  'https://occ-0-4609-784.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSU7HE_H6w0phrVxvnprqrbb1zUbbt9n0DkF03F2j48zgNi2AunWZME4mEwTuvPSvZ4hVZ2MH4zQVAbw-bsXK023nv65PDcYZID8o6LgaJyZM9HO-CIdFNbm7z12.jpg?r=699'
+ var title = "Ozark" 
+var arr =[]
+ function generate_card(img,title){
+    let item = '<div class="card col-sm-3" style="width: 18rem;">'
+        item += '<img src="'
+        item += img
+        item += '"'
+        item += 'class="card-img-top" alt="Not Found">'
+        item += '<div class="card-body" >'
+        item += '<p class="card-text">'
+        item += title
+        item += '</p>'
+        item += '</div>'
+        item += '</div>'
+    return item
+}
+ function get(){
+    var myHeaders = new Headers();    
+    myHeaders.append("token",localStorage.getItem("token"));
+  var requestOptions = {
+    method: 'GET',
+    redirect: 'follow',
+    headers:{"content-type":"application/json"},
+    headers:myHeaders,
+  };
+  fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/78/videos/", requestOptions)
+  .then(response => response.json())
+  .then(result =>{     
+    for (i=0 ;i<result.length;i++){
+        $('.m-top').append(generate_card(result[i].url.image,result[i].title))
+     }
+})
+}
+
+
+function logout(){
+    var myHeaders = new Headers();
+myHeaders.append("token", localStorage.getItem("token"));
+
+var requestOptions = {
+  method: 'GET',
+  headers: myHeaders,
+  redirect: 'follow'
+};
+
+fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/78/logout", requestOptions)
+  .then(response => response.text())
+  .then(result => 
+    {console.log(result.success) 
+    window.location.href = "./HomePage.html"
+    localStorage.removeItem("username")
+})
+  .catch(error => console.log('error', error));
+}
+
+if(localStorage.getItem('username')){
+  $('.logout').css({
+    'display':'block'
+  })
+  $('.signin').css({
+    'display':'none',
+  })
+  
+$('.profile').css({
+  'display':'block'
+})
+$('.register').css({
+  'display':'none'
+})
+}else{
+  $('.home').css({
+    "display":"none"
+  })
+  $('.dashboard').css({
+    "display":"none"
+  })
+$('.signin').css({
+  'display':'block',
+})
+$('.logout').css({
+  'display':'none'
+})
+$('.profile').css({
+  'display':'none'
+})
+ login("dummyuser","123456789")
+}
+
+if(localStorage.getItem("username") == "admin"){
+  $('.admin').css({
+      "display":"block",
+  })
+}
+function login(user,passw){
+  var raw = JSON.stringify({ "username": user, "password": passw });
+  var requestOptions = {
+    method: 'POST',
+    body: raw,
+    redirect: 'follow',
+    headers:{"content-type":"application/json"}
+  };
+  fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/78/login", requestOptions)
+    .then(response => response.json())
+    .then(result => {      
+      localStorage.setItem('token',result.token)
+      get()
+  })
+    .catch(() => alert("login failed"))
+}
+$('.signin').click(function(){
+window.location.href = "./signin.html"
+})
+
+function register(){
+  $('.register').click(function(){
+      window.location.href = "register.html"   
+  })
+}

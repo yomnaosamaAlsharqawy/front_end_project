@@ -1,0 +1,12 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #181118;
+}
+#frm1{
+    width: 50vw;
+}
+
+.form-group{
+    width: 100%;
+}

@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/signin.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="d-flex flex-column first-flex-bg ">
+        <div class=" head-container d-flex flex-row justify-content-between">
+            <div style="margin-left: 2%; margin-top: -0.3%;">
+                <a href="C:\Users\goldf\Desktop\ITI\Bootstrap\Netflix Project\NetflixHomePage\NetflixHomePage.html">
+                    <img style="max-width: 200px; max-height: 100px;"
+                        src="https://images.ctfassets.net/4cd45et68cgf/7LrExJ6PAj6MSIPkDyCO86/542b1dfabbf3959908f69be546879952/Netflix-Brand-Logo.png?w=684&h=456"
+                        alt="">
+                </a>
+            </div>
+        </div>
+
+        <div style="height: 60%;" class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4 middle row text-center">
+                <div class="col-md-2"></div>
+                <div class="col-md-8" style=" padding: 0%; height:30rem; width: 100%;">
+                    <div>
+                        <p class="sign-in">Sign In</p>
+                    </div>
+                    <div id="form">
+                        <input height="2rem" class="email" type="text" id="InputEmail1" aria-describedby="emailHelp"
+                            placeholder="Email or phone number">
+                        <input class="email" type="password" id="InputPassword" aria-describedby="emailHelp"
+                            placeholder="Password">
+                        <button onclick="login()" class="wide-btn btn" type="button"> Sign In </button>
+
+                        <div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
+
+        </div>
+        <div style="height: 7.5%;"></div>
+        <div class="footer row">
+
+            <div class="row col-md-12">
+                <div class="col-md-3 footer-col">
+                    <a style="margin-top: 15%; margin-bottom: 10%;" class="footer-link-main" href=""> Questions? Contact
+                        us.</a>
+                    <a class="footer-link-main" href="">FAQ</a>
+                    <a class="footer-link-main" href="">Cookie Preferences</a>
+                    <div class="dropdown language">
+                        <button class=" btn btn-language btn-lg dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true">
+                            <span class="fa fa-globe"></span> &nbsp; English
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a style="color: rgba(212, 210, 210, 0.527)" class="dropdown-item" href="#">العربية</a>
+                            <a style="color: rgba(212, 210, 210, 0.527)" class="dropdown-item" href="#">English</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="./js/signin.js"></script>
+</html>
