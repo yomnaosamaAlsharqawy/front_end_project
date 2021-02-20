@@ -1,0 +1,33 @@
+body{
+    background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/399d6794-b770-4b21-992d-a3326710a170/4e8ce83f-6f81-4f1c-a502-18ba6d05c949/EG-en-20210215-popsignuptwoweeks-perspective_alpha_website_small.jpg');
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+.title{
+    color: white; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    -webkit-text-stroke: 2px black;
+    /* font-size: 150px; */
+}
+.option{
+    color: rgb(192, 40, 40); 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+}
+
+form{
+    color: white; 
+    margin-left: 20%;
+}
+.labelsize{
+    font-size:xx-large;
+}
+.labelsize2{
+    font-size:large;
+}
+
+.contain{
+    background: rgba(49, 49, 54, 0.5) ;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
