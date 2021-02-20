@@ -1,3 +1,4 @@
+
 let i =0
 var arr =[]
 let auto_slider_img = 
@@ -13,65 +14,27 @@ let auto_slider_img =
 
 get()
 setInterval(change_image,3000)
-
 function player(){
-    for(let a of arr){
-        if (a.title == $(this).find('.card-text').text()){
-        sessionStorage.setItem("length",a.url.video_url.length)
-        for(let i = 0 ; i< a.url.video_url.length ;i++ ){
-             sessionStorage.setItem(i,a.url.video_url[i])
+        sessionStorage.setItem("videoUrl",sessionStorage.getItem(Number($(this).find('.card-text').text().split(" ")[1].trim())-1))
+        window.location.href = "./v.html"
         }
-        // window.location.href = "./v.html"
-        }
-    }
+    
        
-}
-
 function change_image(){
     if(i < auto_slider_img.length){
         $('.jumbotron').css('background-image', 'url(' + auto_slider_img[i] + ')');
         i++;
     }else{
-        i =0 ;
+        i = 0 ;
     }
 }
 
 function get(){
-    var myHeaders = new Headers();    
-    myHeaders.append("token",localStorage.getItem('token'));
-  var requestOptions = {
-    method: 'GET',
-    redirect: 'follow',
-    headers:{"content-type":"application/json"},
-    headers:myHeaders,
-  };
-  fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/78/videos", requestOptions)
-  .then(response => response.json())
-  .then(result =>{
-      arr = result
-      console.log(arr)
-      for (i=0 ;i<result.length;i++){
-        if(result[i].type == "serial"){
-          $('.m-top').append(generate_card(result[i].url.image,result[i].title))
-        console.log(result[i].type)    
-        }
-        }   
-    $('.card').click(player);
-    if(localStorage.getItem('username') != 'admin'){
-        $(".delete").css({
-            "display":"none"
-        })    
-    }
-    $(".delete").click((e)=>{ 
-    e.stopPropagation();
-    
-    for(let a of arr){
-         if (a.title == $(e.target).parent().siblings().find('.card-text').text()){
-              remove_movie(a.id)  
-    }
-    }
-})
-})
+      console.log(sessionStorage.getItem('length'))
+      for (let i=0 ;i< Number(sessionStorage.getItem("length"));i++){
+          $('.m-top').append(generate_card(sessionStorage.getItem("img"),i+1))   
+        } 
+        $('.card').click(player);  
 }
 function generate_card(img,title){
     let item = '<div class="card col-sm-3"  style="width: 18rem;">'
@@ -81,11 +44,11 @@ function generate_card(img,title){
         item += 'class="card-img-top" alt="Not Found">'
         item += '<div class="card-body" >'
         item += '<p class="card-text">'
-        item += title
+        item += "Episode"+" "+title
         item += '</p>'
         item += '</div>'
         item += '<div style = "width:100% ; display:flex;flex-direction:row">'
-        item += '<button style="flex : 1" class=" bg-danger text-white delete">Delete</button><button style="flex : 1" class=" bg-info text-white delete edit">Edit</button>'
+        // item += '<button style="flex : 1" class=" bg-danger text-white delete">Delete</button><button style="flex : 1" class=" bg-info text-white delete edit">Edit</button>'
         item += '</div>'
         item += '</div>'
     return item

@@ -18,7 +18,7 @@ function player(){
     for(let a of arr){
         if (a.title == $(this).find('.card-text').text()){
         sessionStorage.setItem("length",a.url.video_url.length)
-        sessionStorage.setItem("title",a.title)
+        sessionStorage.removeItem("videoUrl",a.title)
         sessionStorage.setItem("img",a.url.image)
         for(let i = 0 ; i< a.url.video_url.length ;i++ ){
              sessionStorage.setItem(i,a.url.video_url[i])
@@ -26,7 +26,6 @@ function player(){
         window.location.href = "./Episodes.html"
         }
     }
-       
 }
 
 function change_image(){
