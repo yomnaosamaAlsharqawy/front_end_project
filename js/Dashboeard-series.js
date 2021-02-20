@@ -17,9 +17,11 @@ setInterval(change_image,3000)
 function player(){
     for(let a of arr){
         if (a.title == $(this).find('.card-text').text()){
-        sessionStorage.removeItem('videoUrl')
-        sessionStorage.setItem('videoUrl', a.url.video_url);
-        window.location.href = "./v.html"
+        sessionStorage.setItem("length",a.url.video_url.length)
+        for(let i = 0 ; i< a.url.video_url.length ;i++ ){
+             sessionStorage.setItem(i,a.url.video_url[i])
+        }
+        // window.location.href = "./v.html"
         }
     }
        
