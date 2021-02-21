@@ -69,6 +69,9 @@ function get() {
         $(".delete").css({
           "display": "none"
         })
+        $(".edit").css({
+          "display": "none"
+        })
       }
       $(".delete").click((e) => {
         alert("this may take few seconds")

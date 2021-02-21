@@ -42,7 +42,7 @@ async function videoadd() {
     //take data from session storage
     // var token = localStorage.getItem("token");
     // myHeaders.append("token", token);
-    myHeaders.append("token", "7b67c1ef-fc98-4c81-90e8-f6c65f97aef9");
+    myHeaders.append("token", localStorage.getItem("token"));
     myHeaders.append("content-type", "application/json");
 
     var raw = JSON.stringify({
@@ -76,7 +76,7 @@ function videoedit() {
     let arr;
     //read data from form
     // localStorage.setItem('id', 2);
-    let video_id = sessionStorage.getItem("id");
+    let video_id = sessionStorage.getItem("index");
     console.log(video_id);
     var myHeaders = new Headers();
     myHeaders.append("token", "7b67c1ef-fc98-4c81-90e8-f6c65f97aef9");
@@ -97,7 +97,7 @@ function videoedit() {
 
 
 function updatevideo(id, oldtitle, oldimage, oldurl) {
-    alert(" hi");
+    alert("update successfully");
     let title = document.getElementById("title").value;
     let url = document.getElementById("url").value;
     const image = getDataUrl(document.getElementById("test_image"));
@@ -110,13 +110,13 @@ function updatevideo(id, oldtitle, oldimage, oldurl) {
         "title": oldtitle,
         "type": "movie"
     }
-    if (title != "") {
+    if (title.length != 0) {
         obj.title = title
     }
-    if (url != "") {
+    if (url.length != 0) {
         obj.url.video_url = url
     }
-    if (image != "") {
+    if (image.length != 0) {
         obj.url.image = image
     }
     // connect api for new updates

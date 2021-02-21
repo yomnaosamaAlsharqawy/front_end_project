@@ -30,6 +30,8 @@ function player() {
 }
 
 
+
+
 //set image to new every 3 seconds
 function change_image() {
   if (i < auto_slider_img.length) {
@@ -65,6 +67,9 @@ function get() {
         $(".delete").css({
           "display": "none"
         })
+        $(".edit").css({
+          "display": "none"
+        })
       }
       $(".delete").click((e) => {
         e.stopPropagation();
@@ -80,6 +85,7 @@ function get() {
         for (let a of arr) {
           if (a.title == $(e.target).parent().siblings().find('.card-text').text()) {
             sessionStorage.setItem("index", a.id)
+            window.location.href = "./EditVideo.html"
           }
         }
       })
