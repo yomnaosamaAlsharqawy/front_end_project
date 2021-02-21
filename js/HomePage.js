@@ -1,17 +1,5 @@
-
-// document.addEventListener('DOMContentLoaded', (event) => {
-//   get()
-// });
-get()
-window.onscroll = function(){
-
-   if(window.scrollY  < 250)
-    $('.navbar').css({'background' :'transparent'})
-    else
-    $('.navbar').css({'background' :'#181818'})  
-}
 let i =0
-
+var arr = []
 let auto_slider_img = 
 [
     'https://occ-0-4609-784.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABQeswFYSQhT_EKhWh1GiRCmRMNpDeJ0YZScEG1ADRZFxht1kMwkCc_rmyYjhHgH_MqlPO44lB9Tcf-nm86Aj1IBoFvDm.webp?r=2fc',
@@ -21,7 +9,19 @@ let auto_slider_img =
     'https://occ-0-4609-784.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABRkumeuYeu67Yjb_fL92Wmpqf8aHj59q-rwJCj5kd-LEfBcPc32FGi-DhushJJH4G1SvPsZlqKdoxmyqk4HuyS4kVKC6.webp?r=567',
     'https://occ-0-4609-784.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABUYLolq_XZqb03iMpNaeYmPp5pErmI5bigSQlt7Yr7Kvfw6jT1AZYLpVGoHTUk6DuD38CMEOpjGhSqqeaE11t-4-EvSa.webp?r=359'
 ]
+
+
+//retrieve all data and append to parent
+get()
+
+// set image every 3 seconds
 setInterval(change_image,3000)
+
+// check the login user or no login account
+check_login()
+
+
+
 function change_image(){
     if(i < auto_slider_img.length){
         $('.jumbotron').css('background-image', 'url(' + auto_slider_img[i] + ')');
@@ -31,10 +31,6 @@ function change_image(){
     }
 }
 
-
- var img =  'https://occ-0-4609-784.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSU7HE_H6w0phrVxvnprqrbb1zUbbt9n0DkF03F2j48zgNi2AunWZME4mEwTuvPSvZ4hVZ2MH4zQVAbw-bsXK023nv65PDcYZID8o6LgaJyZM9HO-CIdFNbm7z12.jpg?r=699'
- var title = "Ozark" 
-var arr =[]
  function generate_card(img,title){
     let item = '<div class="card col-sm-3" style="width: 18rem;">'
         item += '<img src="'
@@ -67,7 +63,7 @@ var arr =[]
 })
 }
 
-
+// logout to home page 
 function logout(){
     var myHeaders = new Headers();
 myHeaders.append("token", localStorage.getItem("token"));
@@ -88,44 +84,7 @@ fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft
   .catch(error => console.log('error', error));
 }
 
-if(localStorage.getItem('username')){
-  $('.logout').css({
-    'display':'block'
-  })
-  $('.signin').css({
-    'display':'none',
-  })
-  
-$('.profile').css({
-  'display':'block'
-})
-$('.register').css({
-  'display':'none'
-})
-}else{
-  $('.home').css({
-    "display":"none"
-  })
-  $('.dashboard').css({
-    "display":"none"
-  })
-$('.signin').css({
-  'display':'block',
-})
-$('.logout').css({
-  'display':'none'
-})
-$('.profile').css({
-  'display':'none'
-})
- login("dummyuser","123456789")
-}
 
-if(localStorage.getItem("username") == "admin"){
-  $('.admin').css({
-      "display":"block",
-  })
-}
 function login(user,passw){
   var raw = JSON.stringify({ "username": user, "password": passw });
   var requestOptions = {
@@ -150,4 +109,82 @@ function register(){
   $('.register').click(function(){
       window.location.href = "register.html"   
   })
+}
+
+function check_login(){
+  if(localStorage.getItem('username'))
+  {
+    $('.logout').css({
+      'display':'block'
+    })
+    
+    $('.signin').css({
+  
+      'display':'none',
+    
+    })
+    
+  $('.profile').css({
+  
+    'display':'block'
+  
+  })
+  
+  $('.register').css({
+  
+    'display':'none'
+  
+  })}
+  
+  else
+  {
+    $('.home').css({
+  
+      "display":"none"
+  
+    })
+    $('.dashboard').css({
+  
+      "display":"none"
+  
+    })
+    $('.signin').css({
+  
+    'display':'block',
+  
+  })
+  
+  $('.logout').css({
+  
+    'display':'none'
+  
+  })
+  
+  $('.profile').css({
+  
+    'display':'none'
+  
+  })
+  
+  login("dummyuser","123456789")
+  
+  }
+}
+
+
+if(localStorage.getItem("username") == "admin"){
+  $('.admin').css({
+
+      "display":"block",
+
+  })
+
+}
+
+window.onscroll = function(){
+
+  if(window.scrollY  < 250)
+   $('.navbar').css({'background' :'transparent'})
+   else
+   $('.navbar').css({'background' :'#181818'})  
 }
