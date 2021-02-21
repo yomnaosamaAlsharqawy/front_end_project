@@ -64,13 +64,20 @@ function get(){
         })    
     }
     $(".delete").click((e)=>{ 
-    e.stopPropagation();
-    
+    e.stopPropagation();   
     for(let a of arr){
          if (a.title == $(e.target).parent().siblings().find('.card-text').text()){
               remove_movie(a.id)  
     }
     }
+})
+$(".edit").click((e)=>{ 
+  e.stopPropagation();   
+  for(let a of arr){
+       if (a.title == $(e.target).parent().siblings().find('.card-text').text()){
+            sessionStorage.setItem("index",a.id)  
+  }
+  }
 })
 })
 }
@@ -86,7 +93,7 @@ function generate_card(img,title){
         item += '</p>'
         item += '</div>'
         item += '<div style = "width:100% ; display:flex;flex-direction:row">'
-        item += '<button style="flex : 1" class=" bg-danger text-white delete">Delete</button><button style="flex : 1" class=" bg-info text-white delete edit">Edit</button>'
+        item += '<button style="flex : 1" class=" bg-danger text-white delete">Delete</button><button style="flex : 1" class=" bg-info text-white edit">Edit</button>'
         item += '</div>'
         item += '</div>'
     return item
