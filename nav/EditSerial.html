@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!--css files-->
+    <link rel="stylesheet" href="../css/Addserial.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</head>
+
+<body onload="episodes()">
+    <div class="container-fluid mt-1">
+        <h1 class="display-1 text-center mt-5 title">Edit Video</h1>
+        <div class="contain w-auto">
+            <form class="mt-5 text-center" onsubmit="videoedit(); return false">
+                <h1 class="option text-left">*update one or more info*</h1>
+                <div class="form-group row">
+                    <label for="title" class="col-sm-2 col-form-label labelsize2">Serial New Title:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="title">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="url" class="col-sm-2 col-form-label labelsize2">Episode New URL:</label>
+                    <div class="col-sm-6">
+                        <input type="url" class="form-control urls" id="url">
+                    </div>
+                    <label for="url" class="col-sm-2 col-form-label labelsize2">Episode number:</label>
+                    <div class="col-sm-2" style="margin-left: -3%;">
+                        <select class="form-control select">
+                          </select>
+                    </div>
+                </div>
+                <div class="form-group row divadd">
+                    <label for="choose" class="col-sm-2 col-form-label labelsize2">Serial New Image:</label>
+                    <div class="col-sm-6">
+                        <input type="file" class="form-control-file" id="choose">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <img class="w-50 mt-1" id="image" style="margin-left: -17%;">
+                    <img id="test_image" style="display: none;">
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <input type="submit" class="btn btn-danger btn-lg w-25" value="Edit">
+                    </div>
+                </div>
+            </form>
+            <div class="col-sm-6 text-center" style="margin-left: 28%;">
+                <button class="btn btn-success btn-lg add">update episode url</button>
+            </div>
+        </div>
+    </div>
+
+    <!--************************javascript & jquery links**************************-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <script src="../js/editserial.js"></script>
+</body>
+
+</html>

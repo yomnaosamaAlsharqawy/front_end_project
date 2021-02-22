@@ -87,6 +87,7 @@ function get() {
         for (let a of arr) {
           if (a.title == $(e.target).parent().siblings().find('.card-text').text()) {
             sessionStorage.setItem("index", a.id)
+            window.location.href = "../nav/episode_option_choose.html"
           }
         }
       })

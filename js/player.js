@@ -63,11 +63,11 @@ function loadMeta(meta) {
 function playPause() {
     if (video.paused) {
         video.play();
-        document.querySelector('#playPauseBtn img').setAttribute('src', 'icons/pause.svg');
+        document.querySelector('#playPauseBtn img').setAttribute('src', '../icons/pause.svg');
     }
     else {
         video.pause();
-        document.querySelector('#playPauseBtn img').setAttribute('src', 'icons/play.svg');
+        document.querySelector('#playPauseBtn img').setAttribute('src', '../icons/play.svg');
     }
 }
 
