@@ -78,7 +78,7 @@ fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft
   .then(response => response.text())
   .then(result => 
     {console.log(result.success) 
-    window.location.href = "./HomePage.html"
+    window.location.href = "./index.html"
     localStorage.removeItem("username")
 })
   .catch(error => console.log('error', error));
@@ -102,12 +102,12 @@ function login(user,passw){
     .catch(() => alert("login failed"))
 }
 $('.signin').click(function(){
-window.location.href = "./signin.html"
+  window.location.href = "./nav/signin.html"
 })
 
 function register(){
   $('.register').click(function(){
-      window.location.href = "register.html"   
+      window.location.href = "./nav/register.html"   
   })
 }
 

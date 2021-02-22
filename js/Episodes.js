@@ -1,4 +1,3 @@
-
 let i =0
 var arr =[]
 let auto_slider_img = 
@@ -84,7 +83,7 @@ fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft
   .then(result => 
     {
     console.log(result.success) 
-    window.location.href = "./HomePage.html"
+    window.location.href = "../HomePage.html"
     localStorage.removeItem("username")
     })
   .catch(error => console.log('error', error));

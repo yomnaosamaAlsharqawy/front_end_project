@@ -144,7 +144,7 @@ function logout() {
     .then(response => response.text())
     .then(result => {
       console.log(result.success)
-      window.location.href = "./HomePage.html"
+      window.location.href = "../index.html"
       localStorage.removeItem("username")
     })
     .catch(error => console.log('error', error));

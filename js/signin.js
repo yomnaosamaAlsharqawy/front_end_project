@@ -21,7 +21,7 @@ function login(){
                  if (data.success == "logined successfully"){
                   document.getElementById("InputEmail1").value = "";
                   document.getElementById("InputPassword").value = "";
-                  window.location.href = "./HomePage.html"
+                  window.location.href = "../index.html"
                 }
         }
        function check_logged_in(){
