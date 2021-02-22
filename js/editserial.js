@@ -29,10 +29,10 @@ window.addEventListener('load', function () {
 //add new div to add new episode
 $(document).ready(function () {
     $(".add").click(function () {
-        sessionStorage.setItem('id', "2111");
+        // sessionStorage.setItem('id', "2111");
         let video_id = sessionStorage.getItem("id");
         var myHeaders = new Headers();
-        myHeaders.append("token", "7b67c1ef-fc98-4c81-90e8-f6c65f97aef9");
+        myHeaders.append("token", localStorage.getItem("token"));
         myHeaders.append("content-type", "application/json");
 
         var requestOptions = {
@@ -64,10 +64,10 @@ $(document).ready(function () {
 function episodes() {
     let arr;
     //read data from form
-    sessionStorage.setItem('id', "2111");
+    // sessionStorage.setItem('id', "2111");
     let video_id = sessionStorage.getItem("id");
     var myHeaders = new Headers();
-    myHeaders.append("token", "7b67c1ef-fc98-4c81-90e8-f6c65f97aef9");
+    myHeaders.append("token", localStorage.getItem("token"));
     myHeaders.append("content-type", "application/json");
 
     var requestOptions = {
@@ -96,10 +96,10 @@ function episodes() {
 //get data of this serial from api 
 function videoedit() {
     //read data from form
-    sessionStorage.setItem('id', "2111");
+    // sessionStorage.setItem('id', "2111");
     let video_id = sessionStorage.getItem("id");
     var myHeaders = new Headers();
-    myHeaders.append("token", "7b67c1ef-fc98-4c81-90e8-f6c65f97aef9");
+    myHeaders.append("token", localStorage.getItem("token"));
     myHeaders.append("content-type", "application/json");
 
     var requestOptions = {
@@ -158,7 +158,7 @@ function updatevideo(id, oldtitle, oldimage, oldurl) {
     var myHeaders = new Headers();
     //take data from session storage
     // myHeaders.append("token", localStorage.getItem("token"));
-    myHeaders.append("token", "7b67c1ef-fc98-4c81-90e8-f6c65f97aef9");
+    myHeaders.append("token", localStorage.getItem("token"));
     myHeaders.append("content-type", "application/json");
 
     var raw = JSON.stringify(obj);

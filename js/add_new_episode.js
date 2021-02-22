@@ -13,7 +13,7 @@ function videoedit() {
     sessionStorage.setItem('id', "2111");
     let video_id = sessionStorage.getItem("id");
     var myHeaders = new Headers();
-    myHeaders.append("token", "7b67c1ef-fc98-4c81-90e8-f6c65f97aef9");
+    myHeaders.append("token", localStorage.getItem("token"));
     myHeaders.append("content-type", "application/json");
 
     var requestOptions = {
@@ -49,7 +49,7 @@ function updatevideo(id, oldtitle, oldimage, oldurls) {
     var myHeaders = new Headers();
     //take data from session storage
     // myHeaders.append("token", localStorage.getItem("token"));
-    myHeaders.append("token", "7b67c1ef-fc98-4c81-90e8-f6c65f97aef9");
+    myHeaders.append("token", localStorage.getItem("token"));
     myHeaders.append("content-type", "application/json");
 
     var raw = JSON.stringify(obj);

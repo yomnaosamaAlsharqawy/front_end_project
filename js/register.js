@@ -21,6 +21,6 @@ function check_user(data){
         document.getElementById("userName").value = ""
         document.getElementById("Password").value = ""
         localStorage.setItem("plan",document.querySelector(".plan").value);
-        window.location.href = "./signin.html"
+        window.location.href = "./addprofile.html"
   }
 }

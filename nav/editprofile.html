@@ -1,0 +1,108 @@
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!--css files-->
+    <link rel="stylesheet" href="../css/profile.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</head>
+
+<body onload="basicdata()">
+    <div class="container">
+        <form onsubmit="editprofile(); return false;">
+            <div class="row gutters h-100" style="width: 130%; margin-left: -15%;">
+                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+                    <div class="card h-100 w-100">
+                        <div class="card-body">
+                            <div class="account-settings">
+                                <div class="user-profile">
+                                    <div class="user-avatar">
+                                        <img src="images/patriotsday.jpg" alt="Maxwell Admin">
+                                    </div>
+                                    <input type="file" class="form-control-file ml-5 mt-3 user" id="choose">
+                                    <img id="test_image" style="display: none;">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <!-- <div class="row gutters"> -->
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <h1 class="mb-3 text-danger">Edit Personal Details</h1>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="firstname">First Name</label>
+                                    <input type="text" class="form-control" id="firstname"
+                                        placeholder="Enter first name">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="lastname">Last Name</label>
+                                    <input type="text" class="form-control" id="lastname" placeholder="Enter last name">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="text" class="form-control" id="phone" placeholder="Enter phone number">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email ID">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1" class="text-white">Select Plan</label>
+                                <select class="form-control plan" id="exampleFormControlSelect1 "> 
+                                    <option value="">---</option>
+                                  <option value="30 EGP">30 EGP</option>
+                                  <option value="150 EGP">150 EGP</option>
+                                  <option value="300 EGP">300 EGP</option>
+                                </select>
+                            </div>
+                            </div>
+
+                            <!-- </div> -->
+
+                            <div class="row gutters">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="text-right">
+                                        <input type="submit" class="btn btn-danger w-25" value="Save">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--************************javascript & jquery links**************************-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <script src="../js/editprofile.js"></script>
+</body>
+
+</html>
