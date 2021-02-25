@@ -77,6 +77,8 @@ function addprofile() {
         tx.executeSql(`INSERT into accounts(username, firstname, lastname, phone, email, plan, image) values('${username}', '${first_name}', '${last_name}', '${phone}', '${email}', '${plan}', '${image}')`)
         // tx.executeSql('DROP TABLE accounts');
     });
-    window.location.href ="../index.html"
+    setTimeout(function(){
+        window.location.href ="signin.html"
+    },3000)
 }
 

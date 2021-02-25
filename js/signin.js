@@ -9,7 +9,7 @@ function login(){
               redirect: 'follow',
               headers:{"content-type":"application/json"}
             };
-            fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/78/login", requestOptions)
+            fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/1500/login", requestOptions)
               .then(response => response.json())
               .then(result =>  check_user(result))
               .catch(() => alert("login failed"))
@@ -25,7 +25,7 @@ function login(){
                 }
         }
        function check_logged_in(){
-         if(localStorage.getItem("username")){
-          window.location.href = "./HomePage.html"
-         }
+        //  if(localStorage.getItem("username")){
+        //   window.location.href = "signin.html"
+        //  }
        } 

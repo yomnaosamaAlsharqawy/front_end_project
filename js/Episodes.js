@@ -63,7 +63,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/78/videos/"+id, requestOptions)
+fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/1500/videos/"+id, requestOptions)
   .then(response => response.text())
   .then(result =>alert("succesfully deleted") )
   .catch(error => console.log('error', error));
@@ -78,12 +78,12 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/78/logout", requestOptions)
+fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/1500/logout", requestOptions)
   .then(response => response.text())
   .then(result => 
     {
     console.log(result.success) 
-    window.location.href = "../HomePage.html"
+    window.location.href ="../index.html"
     localStorage.removeItem("username")
     })
   .catch(error => console.log('error', error));

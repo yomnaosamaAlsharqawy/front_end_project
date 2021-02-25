@@ -10,8 +10,8 @@ $(document).ready(function () {
 function videoedit() {
     let arr;
     //read data from form
-    sessionStorage.setItem('id', "2111");
-    let video_id = sessionStorage.getItem("id");
+    // sessionStorage.setItem('id', "2111");
+    let video_id = sessionStorage.getItem("index");
     var myHeaders = new Headers();
     myHeaders.append("token", localStorage.getItem("token"));
     myHeaders.append("content-type", "application/json");
@@ -22,7 +22,7 @@ function videoedit() {
         redirect: 'follow'
     };
     //retrive data from api
-    fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/78/videos/" + video_id, requestOptions)
+    fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/1500/videos/" + video_id, requestOptions)
         .then(response => response.json())
         .then(result => { updatevideo(result.data.id, result.data.title, result.data.url.image, result.data.url.video_url) })
         .catch(error => console.log('error', error));
@@ -32,7 +32,9 @@ function videoedit() {
 
 function updatevideo(id, oldtitle, oldimage, oldurls) {
     let url_array = [];
+    console.log(id)
     let urls = $(".urls");
+    console.log(urls)
     for (var i = 0; i < urls.length; i++) {
         oldurls.push($(urls[i]).val());
     }
@@ -60,7 +62,7 @@ function updatevideo(id, oldtitle, oldimage, oldurls) {
         redirect: 'follow'
     };
 
-    fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/78/videos/" + id, requestOptions)
+    fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/1500/videos/" + id, requestOptions)
         .then(response => response.json())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));

@@ -53,9 +53,9 @@ async function videoadd() {
 
     var myHeaders = new Headers();
     //take data from session storage
-    // var token = localStorage.getItem("token");
-    // myHeaders.append("token", token);
-    myHeaders.append("token", "7b67c1ef-fc98-4c81-90e8-f6c65f97aef9");
+    var token = localStorage.getItem("token");
+    myHeaders.append("token", token);
+    // myHeaders.append("token", "7b67c1ef-fc98-4c81-90e8-f6c65f97aef9");
     myHeaders.append("content-type", "application/json");
 
     var raw = JSON.stringify({
@@ -77,7 +77,7 @@ async function videoadd() {
         // headers: { "content-type": "application/json" }
     };
 
-    fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/78/videos/", requestOptions)
+    fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/1500/videos/", requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));

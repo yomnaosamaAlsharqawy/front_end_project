@@ -53,7 +53,7 @@ function get() {
     headers: { "content-type": "application/json" },
     headers: myHeaders,
   };
-  fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/78/videos", requestOptions)
+  fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/1500/videos", requestOptions)
     .then(response => response.json())
     .then(result => {
       arr = result
@@ -124,7 +124,7 @@ function remove_movie(id) {
     redirect: 'follow'
   };
 
-  fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/78/videos/" + id, requestOptions)
+  fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/1500/videos/" + id, requestOptions)
     .then(response => response.text())
     .then(result => alert("succesfully deleted"))
     .catch(error => console.log('error', error));
@@ -141,7 +141,7 @@ function logout() {
     redirect: 'follow'
   };
 
-  fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/78/logout", requestOptions)
+  fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/1500/logout", requestOptions)
     .then(response => response.text())
     .then(result => {
       console.log(result.success)

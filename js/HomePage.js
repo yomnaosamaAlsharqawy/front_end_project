@@ -54,7 +54,7 @@ function get() {
     headers: { "content-type": "application/json" },
     headers: myHeaders,
   };
-  fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/78/videos/", requestOptions)
+  fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/1500/videos/", requestOptions)
     .then(response => response.json())
     .then(result => {
       for (i = 0; i < result.length; i++) {
@@ -74,7 +74,7 @@ function logout() {
     redirect: 'follow'
   };
 
-  fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/78/logout", requestOptions)
+  fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/1500/logout", requestOptions)
     .then(response => response.text())
     .then(result => {
       console.log(result.success)
@@ -93,7 +93,7 @@ function login(user, passw) {
     redirect: 'follow',
     headers: { "content-type": "application/json" }
   };
-  fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/78/login", requestOptions)
+  fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/1500/login", requestOptions)
     .then(response => response.json())
     .then(result => {
       localStorage.setItem('token', result.token)

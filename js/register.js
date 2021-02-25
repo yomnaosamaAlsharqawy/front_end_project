@@ -9,7 +9,7 @@ function signup(){
       redirect: "follow",
       headers:{"content-type":"application/json"}  
     };
-    fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/78/register", requestOptions)
+    fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/1500/register", requestOptions)
       .then(response => response.json())
       .then(result =>  check_user(result))
       .catch(error => alert("register failed"));
@@ -18,6 +18,7 @@ function check_user(data){
   if (data.success == 'registered successfully'){
         localStorage.removeItem("token")
         localStorage.removeItem("username")  
+        localStorage.setItem("username",document.getElementById("userName").value);
         document.getElementById("userName").value = ""
         document.getElementById("Password").value = ""
         localStorage.setItem("plan",document.querySelector(".plan").value);

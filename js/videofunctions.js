@@ -64,7 +64,7 @@ async function videoadd() {
         // headers: { "content-type": "application/json" }
     };
 
-    fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/78/videos/", requestOptions)
+    fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/1500/videos/", requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
@@ -88,7 +88,7 @@ function videoedit() {
         redirect: 'follow'
     };
     //retrive data from api
-    fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/78/videos/" + video_id, requestOptions)
+    fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/1500/videos/" + video_id, requestOptions)
         .then(response => response.json())
         .then(result => {updatevideo(result.data.id, result.data.title, result.data.url.image, result.data.url.video_url)})
         .catch(error => console.log('error', error));
@@ -137,7 +137,7 @@ function updatevideo(id, oldtitle, oldimage, oldurl) {
         redirect: 'follow'
     };
 
-    fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/78/videos/" + id, requestOptions)
+    fetch("https://whispering-journey-12121.herokuapp.com/http://anyservice.imassoft.com/1500/videos/" + id, requestOptions)
         .then(response => response.json())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
